@@ -195,7 +195,11 @@ __attribute__((weak)) void keyboard_pre_init_kb(void) { keyboard_pre_init_user()
  * FIXME: needs doc
  */
 
-__attribute__((weak)) void keyboard_post_init_user() {}
+__attribute__((weak)) void keyboard_post_init_user() {
+	debug_enable=true;
+	debug_matrix=true;
+	debug_keyboard=true;
+}
 
 /** \brief keyboard_post_init_kb
  *
